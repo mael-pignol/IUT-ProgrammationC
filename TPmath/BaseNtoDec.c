@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-int a,b,i,c,j,k,e,f,nbmax;
-
 int taille (int a){
         int n;
         if (a != 0) {
@@ -24,24 +22,15 @@ int taillemax (int a){
 // corps du programme principal
 int main (void)
 {
-        i = 0;
-        c = 0;
-        j = 1;
-        k = 0;
-        b = 0;
-        e = 0;
-        f = 0;
-
+        int a,b,nbmax;
+        int i = 0,c = 0,j = 1,k = 0,b = 0,e = 0,f = 0;
+        
         printf("BASE 2 TO DECMAL\n");
-
 
         printf("Entrer votre nombre\n");
         scanf("%d",&a);
         nbmax = taillemax(a);
         printf("%d",nbmax);
-
-
-
 
         while (k != nbmax) {
 
