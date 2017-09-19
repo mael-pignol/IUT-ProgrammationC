@@ -4,6 +4,7 @@
 #define couleur(param) printf("\033[%sm",param)
 
 int taille (int a){
+        // Sépare unité par unité les différents chiffre d'un nombre
         int n;
         if (a != 0) {
                 n = log10(a);
@@ -14,17 +15,18 @@ int taille (int a){
         }
 }
 
-int taillemax (int a){
+int longueur (int a){
+        // Détermine la longueur d'un nombre
         int n;
         n = log10(a)+1;
         return n;
 }
 
-int BaseNtoDec (int baseB,int nombreB)
-{
+int BaseNtoDec (int baseB,int nombreB){
+        // Convertit un nombre d'une base N vers la base 10
         int i=0,c=0,j=1,k=0,b=0,e=0,f=0,nbmax;
 
-        nbmax = taillemax(nombreB);
+        nbmax = longueur(nombreB);
 
         while (k != nbmax) {
 
@@ -37,8 +39,8 @@ int BaseNtoDec (int baseB,int nombreB)
         return c;
 }
 
-int DectoBaseN (int baseA, int nombreA)
-{
+int DectoBaseN (int baseA, int nombreA){
+        // Convertit un nombre de la base 10 vers une base N
         int b,i=0,c=0;
 
         while (nombreA != 0) {
@@ -51,8 +53,7 @@ int DectoBaseN (int baseA, int nombreA)
         return c;
 }
 
-int main (void)
-{
+int main (void){
         int nombreDeb,baseDeb,baseFin,nbDec;
 
         printf("Bienvenue dans un convertisseur de nombre de base X vers une base Y\n");
