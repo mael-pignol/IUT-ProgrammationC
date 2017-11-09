@@ -1,3 +1,3 @@
 <h1> Liste du contenu : </1>
 
-arg.c : Introduction aux arguments
+arg.c : Introduction aux arguments.
