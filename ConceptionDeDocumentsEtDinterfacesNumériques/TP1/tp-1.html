@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>IUT 2017 - TP n°1</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <h1>Premiers pas en HTML</h1>
+
+  <hr>
+  <div>
+    <h2 id="top">Un peu de mise en forme...</h2>
+
+    <h3>Un paragraphe riche en style</h3>
+
+    <p>
+      "<i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</i>"<a href="#bottom"><sup>[1]</sup></a> Ut enim ad <b>minim veniam</b>, quis nostrud exercitation ullamco laboris nisi
+      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <h3>Un paragraphe riche en retours chariot, avec des espace insécables</h3>
+
+    <p>
+      Lorem ipsum dolor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sit amet, consecteturadipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris
+      <br> nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in<br> reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+
+    <h4>Un exemple de code</h4>
+
+    <p>
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa :<code> for(int i; i
+      &lt;=10; i++) { /* lorem */ }</code> </p>
+
+    <h4>Pour quelques détails de plus...</h4>
+
+
+    <details>
+      <summary>Des détails</summary>
+      <p>Plus d'infos à propos des détails.</p>
+
+    </details>
+
+  </div>
+
+  <hr>
+  <div>
+    <h2>Quelques listes</h2> Ma première liste, et quelques liens :
+    <ul>
+      <li>un premier lien, vers un site externe, dans un nouvel onglet : <a href="http://www.iutnantes.univ-nantes.fr" target="_blank">www.iutnantes.univ-nantes.fr</a></li>
+      <li>un second lien, vers une page dans le même répertoire : <a href="./page-1.html">page 1</a></li>
+      <li>un troisième lien, vers une page dans un sous-répertoire ("docs") : <a href="./docs/page-2.html">page 2</a></li>
+    </ul>
+
+
+
+    Ma seconde liste est numérotée :
+    <ol>
+      <li>un premier élément</li>
+      <li>un second élément</li>
+      <li>un troisième élément</li>
+    </ol>
+
+
+
+    Ma troisième liste comporte plusieurs niveaux et des inversions :
+    <ul>
+      <li>un premier élément, de premier niveau
+        <ol reversed>
+          <li>le troisième élément du second niveau en premier</li>
+          <li>le second... en second</li>
+          <li>le premier en dernier</li>
+        </ol>
+      </li>
+      <li>un second élément, toujours de premier niveau
+        <ul>
+          <li>et ça continue
+            <ul>
+              <li>encore
+                <ul>
+                  <li>et encore</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div>
+    <h2>Un tableau</h2>
+    <p>Enrichi de caractères spéciaux, fusions de cellules, image...</p>
+
+    <table style="width:50%">
+      <tr>
+        <th colspan="2">Titre de l'épisode (VF)</th>
+        <th>Réalisateur</th>
+        <th>Année</th>
+        <th>Héro ou héroïne ?</th>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode I</td>
+        <td>La Menace fantôme</td>
+        <td rowspan="4">George Lucas</td>
+        <td>1999</td>
+        <td>&#x2642;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode II</td>
+        <td>L'Attaque des clones</td>
+        <td>2002</td>
+        <td>&#x2642; + &#x2640;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode III</td>
+        <td>La Revanche des Sith</td>
+        <td>2005</td>
+        <td>&#x2642;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode IV</td>
+        <td>Un Nouvel espoir</td>
+        <td>1977</td>
+        <td>&#x2642;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode V</td>
+        <td>L'Empire contre-attaque</td>
+        <td>Irvin Kershner</td>
+        <td>1980</td>
+        <td>&#x2642;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode VI</td>
+        <td>Le Retour du Jedi</td>
+        <td>Richard Marquand</td>
+        <td>1983</td>
+        <td>&#x2642;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode VII</td>
+        <td>Le Réveil de la Force</td>
+        <td>J. J. Abrams</td>
+        <td>2015</td>
+        <td>&#x2640;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode VIII</td>
+        <td>Les Derniers Jedi</td>
+        <td>Rian Johnson</td>
+        <td>2017</td>
+        <td>&#x2640;</td>
+      </tr>
+      <tr>
+        <td>Star Wars, épisode IX</td>
+        <td>?</td>
+        <td>J. J. Abrams</td>
+        <td>2019</td>
+        <td>?</td>
+      </tr>
+      <tr>
+        <td colspan="5" style="text-align:center;"><img src="./img/star-wars.png" alt="Star Wars"></td>
+      </tr>
+    </table>
+  </div>
+  <hr>
+  <div>
+    <h2>Non pas une image, mais une figure</h2>
+    <figure>
+      <a href="http://www.starwars.com/films/star-wars-episode-viii-the-last-jedi" target="_blank"><img src="./img/derniers-jedi.jpg" alt="Derniers Jedi" width="215" height="290"><br/>
+    </a>
+      <span>L'affiche du film "Les Derniers Jedi" - cliquez sur l'affiche pour en savoir plus</span>
+    </figure>
+  </div>
+  <hr>
+  <footer>
+    <h2 id="bottom">Une note de bas de page !</h2>
+
+    <p><a href="#top"><sub>[1]</sub></a> ... précédée d'un lien de retour en haut de page</p>
+  </footer>
+</body>
+
+</html>
