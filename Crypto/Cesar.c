@@ -40,38 +40,38 @@ int main()
 
     if (fichier != NULL)
     {
-        // Boucle de lecture des caractères un à un
+        // Boucle de lecture des caractÃ¨res un Ã  un
         do
         {
-            caractereActuel = fgetc(fichier); // On lit le caractère
+            caractereActuel = fgetc(fichier); // On lit le caractÃ¨re
 
-            verifLettre=false; // On déclare le caractere comme n'étant pas une lettre
+            verifLettre=false; // On dÃ©clare le caractere comme n'Ã©tant pas une lettre
 
             // Compte du nombre d'occurence pour chaque lettre en ignorant la casse
             for(int j = 65 ; j <=90 ; j++){
                     if(caractereActuel==j || caractereActuel==j+32){
                     compte[j-65]=compte[j-65]+1;
-                    verifLettre = true; // On déclare le caractère comme étant une lettre
+                    verifLettre = true; // On dÃ©clare le caractÃ¨re comme Ã©tant une lettre
                     }
             }
 
-            // On remplace les caractère "éèê" par "e"
+            // On remplace les caractÃ¨re "Ã©Ã¨Ãª" par "e"
             if(caractereActuel==233 || caractereActuel==234 || caractereActuel==235){
                     compte[4]=compte[4]+1;
                     caractereActuel=101;
 
             }
 
-            // Si le caractère n'est pas une lettre, on incrémente le compteur correspondant
+            // Si le caractÃ¨re n'est pas une lettre, on incrÃ©mente le compteur correspondant
             if(verifLettre==false){
                  nombreNonLettre++;
             }
 
-            taille++; // On incrémente le compteur de la taille en caractère du document
+            taille++; // On incrÃ©mente le compteur de la taille en caractÃ¨re du document
 
-        } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
+        } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retournÃ© EOF (fin de fichier)
 
-        nombreLettre = taille - nombreNonLettre; // On calcule le nombre de lettre totale afin de pouvoir déduire un pourczntage
+        nombreLettre = taille - nombreNonLettre; // On calcule le nombre de lettre totale afin de pouvoir dÃ©duire un pourczntage
 
     }
 
@@ -85,7 +85,7 @@ int main()
     }
     printf("\n");
 
-    // Affichage des résultat ( Version nombre d'occurences )
+    // Affichage des rÃ©sultat ( Version nombre d'occurences )
     for(int i = 0; i <26 ; i++){
             printf("%c : %d \n",i+65,compte[i]);
     }
@@ -102,7 +102,7 @@ int main()
             printf("     %c = %0.2f\%    ========     %c = %0.2f\%\n",lettre[i],pourcent,alphabet[i],francais[i]);
     }
 
-    // On calcul le décalage présumé à partir du pourcentage de "e"
+    // On calcul le dÃ©calage prÃ©sumÃ© Ã  partir du pourcentage de "e"
     lettrepresume1 = (int)lettre[25]-64;
     decalage1 = lettrepresume1-5;
 
@@ -127,7 +127,7 @@ int main()
     fclose(fichier);
     printf("\nLe decalage presume est de %d avec une certitude de %d\%\n\n",decalage1,certitude);
 
-    // On propose de déchiffrer à partir des décalages les plus probables
+    // On propose de dÃ©chiffrer Ã  partir des dÃ©calages les plus probables
     if(ecriture(decalage1)==false){
             if(ecriture(decalage2)==false){
                     if(ecriture(decalage3)==false){
@@ -136,7 +136,7 @@ int main()
             }
     }
 
-    // Si les essais précédents n'ont rien donné, on brute force le décalage
+    // Si les essais prÃ©cÃ©dents n'ont rien donnÃ©, on brute force le dÃ©calage
     if(bruteForceMod==true){
 
             for(int i = 1; i <= 26; i++){
